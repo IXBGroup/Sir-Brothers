@@ -14,11 +14,9 @@ const services = [
 ];
 
 const projects = [
-  ["Tree Removal", "Large Tree Removal — Central Nebraska", "center"],
-  ["Storm Cleanup", "Storm Cleanup — Kearney, NE", "70% center"],
-  ["Cedar Clearing", "Cedar Clearing — Custer County", "85% center"],
-  ["Stump Removal", "Stump Removal — Broken Bow", "55% center"],
-  ["Skid Steer Work", "Property Cleanup — Central Nebraska", "right center"],
+  ["Equipment", "Equipment Ready — Custer County", "center", "/sir-equipment-hauling.webp"],
+  ["Skid Steer Work", "Property & Equipment Work — Central Nebraska", "center", "/sir-skid-steer-property-work.webp"],
+  ["Local Fleet", "Work Trucks — Broken Bow, Nebraska", "center 58%", "/sir-work-trucks.webp"],
 ];
 
 export default function Home() {
@@ -63,7 +61,7 @@ export default function Home() {
           <p>From one problem tree to a full property cleanup, SIR Brothers brings the equipment and work ethic to get it handled.</p>
         </div>
         <div className="service-grid">
-          {services.map(([n,title,copy]) => <article className="service-card" key={title}><span>{n}</span><div className="service-photo" style={{backgroundPosition: `${20 + Number(n)*8}% center`}} /><h3>{title}</h3><p>{copy}</p><a href="#contact" aria-label={`Request estimate for ${title}`}>GET AN ESTIMATE →</a></article>)}
+          {services.map(([n,title,copy]) => <article className="service-card" key={title}><span>{n}</span><div className="service-photo" aria-hidden="true"><b>{n}</b></div><h3>{title}</h3><p>{copy}</p><a href="#contact" aria-label={`Request estimate for ${title}`}>GET AN ESTIMATE →</a></article>)}
         </div>
       </section>
 
@@ -85,7 +83,7 @@ export default function Home() {
           <p>Tree work is hands-on. Open any project for a closer look at the equipment, process and cleanup.</p>
         </div>
         <div className="project-grid">
-          {projects.map(([cat,caption,pos],i) => <button key={caption} className={`project-card p${i+1}`} onClick={() => setLightbox(i)} style={{backgroundPosition: pos}} aria-label={`Open ${caption} image`}><span>{cat}</span><strong>{caption}</strong><i>＋</i></button>)}
+          {projects.map(([cat,caption,pos,image],i) => <button key={caption} className={`project-card p${i+1}`} onClick={() => setLightbox(i)} style={{backgroundPosition: pos, backgroundImage: `linear-gradient(0deg,#050505e8,transparent 65%),url('${image}')`}} aria-label={`Open ${caption} image`}><span>{cat}</span><strong>{caption}</strong><i>＋</i></button>)}
         </div>
         <p className="gallery-note">Have project photos? Email them to <a href="mailto:sirbrothersllc@gmail.com">sirbrothersllc@gmail.com</a> to keep this gallery growing.</p>
       </section>
@@ -114,7 +112,7 @@ export default function Home() {
       <footer><div className="footer-brand"><strong>SIR BROTHERS LLC</strong><span>Tree + Property Services</span></div><div><b>BROKEN BOW, NEBRASKA 68822</b><span>Custer County • Central Nebraska</span></div><div><a href="tel:+13084403207">308-440-3207</a><a href="mailto:sirbrothersllc@gmail.com">sirbrothersllc@gmail.com</a></div><div className="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#service-area">Service Area</a><a href="#contact">Contact</a><a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a></div><small className="copyright">© {new Date().getFullYear()} SIR Brothers LLC. All rights reserved.</small></footer>
 
       <a className="mobile-call" href="tel:+13084403207"><span>CALL SIR BROTHERS</span><strong>308-440-3207</strong></a>
-      {lightbox !== null && <div className="lightbox" role="dialog" aria-modal="true" aria-label={projects[lightbox][1]} onClick={() => setLightbox(null)}><button aria-label="Close image">×</button><div className="lightbox-image" style={{backgroundPosition: projects[lightbox][2]}}/><p>{projects[lightbox][1]}</p></div>}
+      {lightbox !== null && <div className="lightbox" role="dialog" aria-modal="true" aria-label={projects[lightbox][1]} onClick={() => setLightbox(null)}><button aria-label="Close image">×</button><div className="lightbox-image" style={{backgroundPosition: projects[lightbox][2], backgroundImage: `url('${projects[lightbox][3]}')`}}/><p>{projects[lightbox][1]}</p></div>}
     </main>
   );
 }
