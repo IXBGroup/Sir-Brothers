@@ -14,6 +14,7 @@ if (!response.ok) throw new Error(`Homepage export failed: ${response.status}`);
 let html = await response.text();
 html = html
   .replaceAll("/assets/", `${base}assets/`)
+  .replaceAll("/sir-", `${base}sir-`)
   .replaceAll('href="/favicon.svg"', `href="${base}favicon.svg"`)
   .replaceAll('content="/og.png"', `content="https://ixbgroup.github.io/Sir-Brothers/og.png"`);
 await writeFile(path.join(output, "index.html"), html);
@@ -22,6 +23,12 @@ await writeFile(path.join(output, ".nojekyll"), "");
 
 const cssDir = path.join(output, "assets");
 for (const filename of await import("node:fs/promises").then(({ readdir }) => readdir(cssDir))) {
+  if (filename.endsWith(".js")) {
+    const file = path.join(cssDir, filename);
+    const javascript = (await readFile(file, "utf8")).replaceAll("/sir-", `${base}sir-`);
+    await writeFile(file, javascript);
+    continue;
+  }
   if (!filename.endsWith(".css")) continue;
   const file = path.join(cssDir, filename);
   const css = (await readFile(file, "utf8"))
