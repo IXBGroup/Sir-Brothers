@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sir-brothers-llc.sites.openai.com"),
+  metadataBase: new URL("https://sir-brothers-llc.roadie-frodie.chatgpt.site"),
   title: "Tree Removal Broken Bow NE | SIR Brothers LLC",
   description: "Tree removal, stump grinding, cedar clearing, storm cleanup and skid steer work in Broken Bow, Custer County and Central Nebraska. Free estimates: 308-440-3207.",
   keywords: ["tree removal Broken Bow NE","tree service Broken Bow Nebraska","stump removal Broken Bow NE","stump grinding Broken Bow NE","cedar tree removal Nebraska","tree removal Custer County NE","storm cleanup Broken Bow NE","skid steer services Broken Bow NE","tree removal Kearney NE","Central Nebraska tree service"],
