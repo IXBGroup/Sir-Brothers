@@ -26,9 +26,9 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#home" aria-label="SIR Brothers LLC home">
-          <span className="brand-mark">SIR</span>
-          <span><b>BROTHERS</b><small>TREE + PROPERTY SERVICES</small></span>
+        <a className="brand" href="#home" aria-label="S.I.R Brothers LLC home">
+          <span className="brand-mark">S.I.R</span>
+          <span><b>BROTHERS LLC</b><small>TREE + PROPERTY SERVICES</small></span>
         </a>
         <button className="menu-button" aria-expanded={menuOpen} aria-controls="nav" onClick={() => setMenuOpen(!menuOpen)}>MENU</button>
         <nav id="nav" className={menuOpen ? "open" : ""} aria-label="Primary navigation">
@@ -51,14 +51,14 @@ export default function Home() {
         <div className="hero-location"><span>WORKING ACROSS</span><strong>CUSTER COUNTY</strong><small>+ CENTRAL NEBRASKA</small></div>
       </section>
 
-      <section className="trust" aria-label="Why choose SIR Brothers">
+      <section className="trust" aria-label="Why choose S.I.R Brothers LLC">
         {[["LOCALLY","OWNED"],["PROFESSIONAL","EQUIPMENT"],["FREE","ESTIMATES"],["CENTRAL","NEBRASKA"]].map(([a,b],i)=><div key={a}><span>0{i+1}</span><strong>{a}<br />{b}</strong></div>)}
       </section>
 
       <section className="section services" id="services">
         <div className="section-heading">
           <div><p className="eyebrow dark"><span /> WHAT WE DO</p><h2>BUILT FOR<br /><em>TOUGH JOBS.</em></h2></div>
-          <p>From one problem tree to a full property cleanup, SIR Brothers brings the equipment and work ethic to get it handled.</p>
+          <p>From one problem tree to a full property cleanup, S.I.R Brothers LLC brings the equipment and work ethic to get it handled.</p>
         </div>
         <div className="service-grid">
           {services.map(([n,title,copy]) => <article className="service-card" key={title}><span>{n}</span><div className="service-photo" aria-hidden="true"><b>{n}</b></div><h3>{title}</h3><p>{copy}</p><a href="#contact" aria-label={`Request estimate for ${title}`}>GET AN ESTIMATE →</a></article>)}
@@ -68,9 +68,9 @@ export default function Home() {
       <section className="about" id="about">
         <div className="about-photo"><span>LOCAL CREW<br />PRO EQUIPMENT</span></div>
         <div className="about-copy">
-          <p className="eyebrow"><span /> ABOUT SIR BROTHERS</p>
+          <p className="eyebrow"><span /> ABOUT S.I.R BROTHERS LLC</p>
           <h2>LOCAL EQUIPMENT.<br />LOCAL CREW.<br /><em>HARD WORK.</em></h2>
-          <p>SIR Brothers LLC is based in Broken Bow and serves homeowners, farms, acreages and businesses throughout Custer County and Central Nebraska.</p>
+          <p>S.I.R Brothers LLC is based in Broken Bow and serves homeowners, farms, acreages and businesses throughout Custer County and Central Nebraska.</p>
           <p>We pair practical experience with professional equipment to take on demanding outdoor work—and we treat your property like it matters. The goal is simple: finish the job, haul away the mess and leave the ground as clean and cared for as the work allows.</p>
           <div className="care-note"><strong>THE JOB ISN’T DONE</strong><span>until the property is cleaned up and ready to use.</span></div>
           <a className="text-link" href="#contact">TELL US ABOUT YOUR JOB →</a>
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="area-map" aria-label="Service areas"><div className="map-ring r1"/><div className="map-ring r2"/><div className="map-pin main">BROKEN BOW<small>HOME BASE</small></div><div className="city c1">NORTH PLATTE</div><div className="city c2">KEARNEY</div><div className="city c3">GRAND ISLAND</div><strong>CUSTER COUNTY</strong><span>Surrounding communities welcome—call to ask.</span></div>
       </section>
 
-      <section className="big-cta"><p className="eyebrow"><span /> READY WHEN YOU ARE</p><h2>GOT TREES THAT<br /><em>NEED TO GO?</em></h2><p>Whether it’s one tree, a yard full of stumps, storm damage or a property that needs cleared, give SIR Brothers a call.</p><div className="button-row"><a className="button light" href="tel:+13084403207">CALL 308-440-3207</a><a className="button black" href="#contact">REQUEST A FREE ESTIMATE →</a></div></section>
+      <section className="big-cta"><p className="eyebrow"><span /> READY WHEN YOU ARE</p><h2>GOT TREES THAT<br /><em>NEED TO GO?</em></h2><p>Whether it’s one tree, a yard full of stumps, storm damage or a property that needs cleared, give S.I.R Brothers LLC a call.</p><div className="button-row"><a className="button light" href="tel:+13084403207">CALL 308-440-3207</a><a className="button black" href="#contact">REQUEST A FREE ESTIMATE →</a></div></section>
 
       <section className="contact" id="contact">
         <div className="contact-intro"><p className="eyebrow"><span /> FREE ESTIMATES</p><h2>LET’S TALK<br /><em>ABOUT THE JOB.</em></h2><p>Share a few details and we’ll follow up about your tree removal, cleanup or equipment work.</p><a className="phone-big" href="tel:+13084403207"><small>CALL DIRECT</small>308-440-3207</a><a href="mailto:sirbrothersllc@gmail.com">sirbrothersllc@gmail.com</a></div>
@@ -109,9 +109,9 @@ export default function Home() {
         </form>
       </section>
 
-      <footer><div className="footer-brand"><strong>SIR BROTHERS LLC</strong><span>Tree + Property Services</span></div><div><b>BROKEN BOW, NEBRASKA 68822</b><span>Custer County • Central Nebraska</span></div><div><a href="tel:+13084403207">308-440-3207</a><a href="mailto:sirbrothersllc@gmail.com">sirbrothersllc@gmail.com</a></div><div className="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#service-area">Service Area</a><a href="#contact">Contact</a><a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a></div><small className="copyright">© {new Date().getFullYear()} SIR Brothers LLC. All rights reserved.</small></footer>
+      <footer><div className="footer-brand"><strong>S.I.R BROTHERS LLC</strong><span>Tree + Property Services</span></div><div><b>BROKEN BOW, NEBRASKA 68822</b><span>Custer County • Central Nebraska</span></div><div><a href="tel:+13084403207">308-440-3207</a><a href="mailto:sirbrothersllc@gmail.com">sirbrothersllc@gmail.com</a></div><div className="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#service-area">Service Area</a><a href="#contact">Contact</a><a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a></div><small className="copyright">© {new Date().getFullYear()} S.I.R Brothers LLC. All rights reserved.</small></footer>
 
-      <a className="mobile-call" href="tel:+13084403207"><span>CALL SIR BROTHERS</span><strong>308-440-3207</strong></a>
+      <a className="mobile-call" href="tel:+13084403207"><span>CALL S.I.R BROTHERS LLC</span><strong>308-440-3207</strong></a>
       {lightbox !== null && <div className="lightbox" role="dialog" aria-modal="true" aria-label={projects[lightbox][1]} onClick={() => setLightbox(null)}><button aria-label="Close image">×</button><div className="lightbox-image" style={{backgroundPosition: projects[lightbox][2], backgroundImage: `url('${projects[lightbox][3]}')`}}/><p>{projects[lightbox][1]}</p></div>}
     </main>
   );
