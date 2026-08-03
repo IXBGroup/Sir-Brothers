@@ -33,7 +33,8 @@ for (const filename of await import("node:fs/promises").then(({ readdir }) => re
   const file = path.join(cssDir, filename);
   const css = (await readFile(file, "utf8"))
     .replaceAll("url('/sir-brothers-hero.png')", "url('../sir-brothers-hero.png')")
-    .replaceAll('url("/sir-brothers-hero.png")', 'url("../sir-brothers-hero.png")');
+    .replaceAll('url("/sir-brothers-hero.png")', 'url("../sir-brothers-hero.png")')
+    .replaceAll('url(/sir-brothers-hero.png)', 'url(../sir-brothers-hero.png)');
   await writeFile(file, css);
 }
 
