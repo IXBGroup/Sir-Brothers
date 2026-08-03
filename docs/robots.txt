@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ixbgroup.github.io/Sir-Brothers/sitemap.xml
+Sitemap: https://sir-brothers.com/sitemap.xml
