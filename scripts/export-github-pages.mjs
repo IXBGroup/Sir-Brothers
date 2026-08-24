@@ -9,7 +9,7 @@ await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 await cp(path.join(root, "dist", "client"), output, { recursive: true });
 
-const response = await fetch("http://127.0.0.1:4373/");
+const response = await fetch(process.env.EXPORT_URL ?? "http://127.0.0.1:4373/");
 if (!response.ok) throw new Error(`Homepage export failed: ${response.status}`);
 let html = await response.text();
 html = html.replaceAll("https://ixbgroup.github.io/Sir-Brothers", siteUrl);
