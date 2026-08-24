@@ -47,8 +47,8 @@ export default function Home() {
             <a className="button primary" href="#contact">GET A FREE ESTIMATE <b>→</b></a>
             <a className="button secondary" href="tel:+13084403207">CALL 308-440-3207</a>
           </div>
-          <div className="hero-socials" aria-label="Connect with S.I.R Brothers LLC"><span>FOLLOW + REVIEW</span><a className="facebook" href="https://www.facebook.com/SIRBrothersLLC" target="_blank" rel="noopener noreferrer" aria-label="S.I.R Brothers LLC on Facebook"><img src="/facebook.svg" alt="" /></a><a className="instagram" href="https://www.instagram.com/s.i.r.brothers/" target="_blank" rel="noopener noreferrer" aria-label="S.I.R Brothers LLC on Instagram"><img src="/instagram.svg" alt="" /></a><a className="google" href="https://share.google/v4ysNRUhPK3Wgt2Ms" target="_blank" rel="noopener noreferrer" aria-label="S.I.R Brothers LLC on Google Business"><img src="/google-business.svg" alt="" /></a></div>
         </div>
+        <div className="hero-socials" aria-label="Connect with S.I.R Brothers LLC"><span>FOLLOW + REVIEW</span><a className="facebook" href="https://www.facebook.com/SIRBrothersLLC" target="_blank" rel="noopener noreferrer" aria-label="S.I.R Brothers LLC on Facebook"><img src="/facebook.svg" alt="" /></a><a className="instagram" href="https://www.instagram.com/s.i.r.brothers/" target="_blank" rel="noopener noreferrer" aria-label="S.I.R Brothers LLC on Instagram"><img src="/instagram.svg" alt="" /></a><a className="google" href="https://share.google/v4ysNRUhPK3Wgt2Ms" target="_blank" rel="noopener noreferrer" aria-label="S.I.R Brothers LLC on Google Business"><img src="/google-business.svg" alt="" /></a></div>
         <div className="hero-location"><span>WORKING ACROSS</span><strong>CUSTER COUNTY</strong><small>+ CENTRAL NEBRASKA</small></div>
       </section>
 
